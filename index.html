@@ -1,262 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#0b3c49">
-<title>Island Outpost</title>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
-<style>
-:root{--sea:#0b3c49;--sea2:#16606b;--cream:#fff7e6;--ink:#3a2e1f;--line:#e2d3b0;--accent:#e2703a;--ok:#2f8f5b;--muted:#7d6e55;
---f:"Avenir Next","Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;margin:0;font-family:var(--f);color:var(--ink);overscroll-behavior:none;overflow:hidden;background:var(--sea)}
-#app{max-width:520px;height:100%;margin:0 auto;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--sea),var(--sea2));padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
-header{padding:12px 14px 6px;color:#eafcff}
-.top{display:flex;justify-content:space-between;align-items:baseline}
-.top b{font-size:20px}.top span{font-size:13px;opacity:.85}
-.res{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
-.res div{background:rgba(255,255,255,.12);border-radius:10px;padding:6px 4px;text-align:center;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
-.res small{display:block;font-weight:500;font-size:10px;opacity:.8}
-#rates{font-size:12px;opacity:.8;margin-top:6px}
-main{flex:1;overflow-y:auto;padding:6px 12px 10px}
-section[hidden]{display:none}
-#grid{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;padding:8px;border-radius:18px;background:rgba(0,0,0,.18)}
-.tile{aspect-ratio:1;border:2px solid transparent;border-radius:10px;font-size:24px;position:relative;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;font-family:inherit}
-.tile.f{background:#4c8a55}.tile.r{background:#99a0a8}.tile.d{background:#d6bd5e}.tile.p{background:#c9d89a}
-.tile.sel{border-color:#fff;box-shadow:0 0 0 2px var(--accent)}
-.tile i{position:absolute;right:3px;bottom:1px;font:700 10px var(--f);font-style:normal;background:var(--ink);color:#fff;border-radius:6px;padding:0 4px}
-.tile .g{opacity:.38;font-size:16px}
-.sheet,.card{background:var(--cream);border-radius:16px;padding:12px 14px;margin-top:10px}
-.sheet h3,.card h3{margin:0 0 4px;font-size:16px}.sheet p,.card p{margin:0;font-size:13px;color:var(--muted);line-height:1.45}
-.opt{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
-.opt:last-child{border-bottom:0}.opt .t{flex:1;font-size:14px}.opt .t b{display:block}.opt .t span{font-size:12px;color:var(--muted)}
-.btn{border:0;border-radius:10px;padding:9px 12px;background:var(--accent);color:#fff;font:700 13px var(--f);cursor:pointer;white-space:nowrap}
-.btn.alt{background:#e9dcbc;color:var(--ink)}.btn:disabled{opacity:.4;cursor:default}
-.wide{display:block;width:100%;margin-top:8px;padding:12px;font-size:14px}
-nav{display:flex;background:var(--cream)}
-nav button{flex:1;padding:13px 2px;border:0;background:none;font:700 13px var(--f);color:var(--muted);border-top:3px solid transparent;cursor:pointer}
-nav button[aria-selected="true"]{color:var(--ink);border-top-color:var(--accent)}
-.log{font-size:12px;color:#d7f3f6;margin-top:10px;line-height:1.5}
-#toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9;text-align:center;max-width:88%}
-#toast.on{opacity:1}
-.done{color:var(--ok);font-weight:700}
-button:focus-visible{outline:2px solid #fff;outline-offset:2px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ANANDHU EARNING 2026 !</title>
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Adsgram Script -->
+    <script src="https://sad.adsgram.ai/js/sad-index.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0713;
+            --card-bg: rgba(23, 14, 38, 0.75);
+            --purple-accent: #9d4edd;
+            --purple-glow: #7b2cbf;
+            --purple-light: #e0aaff;
+            --text-main: #ffffff;
+            --text-sub: #b8b0ca;
+            --border-purple: rgba(157, 78, 221, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 16px;
+            position: relative;
+        }
+
+        /* Ambient Background Glows */
+        .ambient-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.35) 0%, rgba(11, 7, 19, 0) 70%);
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            animation: pulse 6s infinite alternate ease-in-out;
+        }
+
+        .ambient-glow-bottom {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(157, 78, 221, 0.2) 0%, rgba(11, 7, 19, 0) 70%);
+            bottom: 5%;
+            right: -10%;
+            z-index: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(0.9); opacity: 0.5; }
+            100% { transform: translateX(-50%) scale(1.15); opacity: 0.9; }
+        }
+
+        /* Card Container */
+        .app-card {
+            width: 100%;
+            max-width: 390px;
+            background: var(--card-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border-purple);
+            border-radius: 28px;
+            padding: 24px 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(157, 78, 221, 0.15);
+            border: 1px solid var(--border-purple);
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--purple-light);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .main-headline {
+            font-size: 21px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
+        }
+
+        /* Content Row: Left Image & Right Button */
+        .content-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Left Side Square Image */
+        .image-wrapper {
+            width: 105px;
+            height: 105px;
+            flex-shrink: 0;
+            position: relative;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--purple-accent), rgba(255, 255, 255, 0.1));
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+            background-color: #170a2c;
+            display: block;
+        }
+
+        /* Right Side Controls */
+        .controls-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Action Button */
+        .btn-action {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-action:active {
+            transform: scale(0.96);
+        }
+
+        .btn-action.unlocked {
+            background: linear-gradient(135deg, #2ec4b6, #20a495);
+            box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4);
+        }
+
+        /* Progress Dots */
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--purple-light);
+            box-shadow: 0 0 10px var(--purple-light);
+            border-color: var(--purple-light);
+        }
+
+        .dot.completed {
+            background: var(--purple-accent);
+            border-color: var(--purple-accent);
+            box-shadow: 0 0 6px var(--purple-accent);
+        }
+
+        /* Caption Container */
+        .caption-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .caption-text {
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .caption-text span {
+            color: var(--purple-light);
+            font-weight: 700;
+        }
+
+        /* Custom Toast Notification */
+        .toast {
+            position: fixed;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(123, 44, 191, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            transition: top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 100;
+            white-space: nowrap;
+        }
+
+        .toast.show {
+            top: 20px;
+        }
+    </style>
 </head>
 <body>
-<div id="app">
-  <header>
-    <div class="top"><b>Island Outpost</b><span id="day">Day 1 · Villagers 2/4</span></div>
-    <div class="res"><div><span id="r-wood">0</span><small>Wood</small></div><div><span id="r-stone">0</span><small>Stone</small></div><div><span id="r-food">0</span><small>Food</small></div><div><span id="r-gold">0</span><small>Gold</small></div></div>
-    <div id="rates"></div>
-  </header>
-  <main>
-    <section id="t-island">
-      <div id="grid" role="grid" aria-label="Your island"></div>
-      <div class="sheet" id="sheet"></div>
-      <div class="log" id="log"></div>
-    </section>
-    <section id="t-quests" hidden><div class="card"><h3>Island goals</h3><div id="qlist"></div></div></section>
-    <section id="t-market" hidden>
-      <div class="card"><h3>Trading post</h3><p>Trade resources with passing merchants.</p><div id="trades"></div></div>
-      <div class="card"><h3>Optional supply drop</h3><p>Watch an ad to receive a crate of supplies. You never need it to play.</p>
-        <button class="btn wide" id="adDrop">Watch an ad: +30 wood, +15 stone, +20 food</button></div>
-    </section>
-    <section id="t-about" hidden>
-      <div class="card"><h3>About Island Outpost</h3><p>A settlement strategy game. Build on your island, match buildings to terrain, feed your villagers and complete goals. Gold and resources are in-game points only. They have no cash value and cannot be withdrawn or exchanged.</p></div>
-      <div class="card"><h3>Ads</h3><p>An ad is shown only after you press “Watch an ad” in the Market tab. The supplies arrive after the ad finishes. The game is fully playable without ads.</p></div>
-      <div class="card"><h3>Privacy</h3><p>Progress is saved on your device. Your Telegram user ID is used only to keep your save separate. We do not sell personal data. Ads are provided by AdsGram, which may process data under its own privacy policy.</p></div>
-      <div class="card"><h3>Terms</h3><p>Provided as is, for entertainment. Contact: @islandoutpost4021bot</p></div>
-    </section>
-  </main>
-  <nav role="tablist">
-    <button role="tab" data-t="island" aria-selected="true">Island</button>
-    <button role="tab" data-t="quests" aria-selected="false">Goals</button>
-    <button role="tab" data-t="market" aria-selected="false">Market</button>
-    <button role="tab" data-t="about" aria-selected="false">About</button>
-  </nav>
-</div>
-<div id="toast" role="status"></div>
 
-<script>
-(function(){
-"use strict";
-var ADSGRAM_BLOCK_ID = "58166"; /* paste your reward block ID from the AdsGram dashboard */
-var AD_COOLDOWN_MS = 45000, N = 36;
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-bottom"></div>
 
-var TG = window.Telegram && window.Telegram.WebApp;
-if (TG) { try { TG.ready(); TG.expand(); TG.disableVerticalSwipes && TG.disableVerticalSwipes(); TG.setHeaderColor && TG.setHeaderColor("#0b3c49"); TG.setBackgroundColor && TG.setBackgroundColor("#0b3c49"); } catch(e){} }
-var uid = (TG && TG.initDataUnsafe && TG.initDataUnsafe.user && TG.initDataUnsafe.user.id) || "local";
-var KEY = "islandoutpost_v1_" + uid;
-function $(i){ return document.getElementById(i); }
-function haptic(k){ try { TG && TG.HapticFeedback && TG.HapticFeedback.impactOccurred(k); } catch(e){} }
-var tt; function toast(m){ var t = $("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(function(){ t.classList.remove("on"); }, 2400); }
-function rng(a){ return function(){ a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-function hstr(x){ var h = 2166136261; for (var i=0;i<x.length;i++){ h ^= x.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">ദയവായി പരസ്യം മുഴുവനായി കാണുക!</div>
 
-/* ===== data ===== */
-var B = {
-  farm:   {e:"🌾", n:"Farm",        c:{wood:15},           p:{food:2},    g:"d", d:"Grows food. Best on fertile land."},
-  lumber: {e:"🪵", n:"Lumber camp", c:{wood:10},           p:{wood:2},    g:"f", d:"Cuts wood. Best in forest."},
-  quarry: {e:"⛏️", n:"Quarry",      c:{wood:20},           p:{stone:1.5}, g:"r", d:"Digs stone. Best on rocky ground."},
-  house:  {e:"🏠", n:"House",       c:{wood:25,stone:5},   cap:4,         d:"Room for 4 more villagers."},
-  market: {e:"🏪", n:"Market",      c:{wood:30,stone:15},  p:{gold:1.2},  d:"Earns gold once you have 2+ villagers."}
-};
-var TN = {f:["🌲","Forest"], r:["🪨","Rocky"], d:["🌻","Fertile"], p:["","Plains"]};
-var RN = {wood:"wood", stone:"stone", food:"food", gold:"gold"};
-var EV = [
-  function(){ var l = Math.min(10, Math.floor(s.res.wood)); s.res.wood -= l; return "A storm scattered your woodpile (−" + l + " wood)."; },
-  function(){ s.res.gold += 15; return "Traders paid for a night’s stay (+15 gold)."; },
-  function(){ s.res.food += 20; return "A bumper harvest (+20 food)."; },
-  function(){ s.res.stone += 10; return "A rockfall exposed fresh stone (+10 stone)."; }
-];
-var QS = [
-  {t:"Build a farm", ok:function(){ return cnt("farm") >= 1; }, r:{wood:20}},
-  {t:"Build 3 houses", ok:function(){ return cnt("house") >= 3; }, r:{stone:20}},
-  {t:"Reach 10 villagers", ok:function(){ return s.pop >= 10; }, r:{gold:25}},
-  {t:"Open a market", ok:function(){ return cnt("market") >= 1; }, r:{wood:40}},
-  {t:"Upgrade a building to level 3", ok:function(){ return s.tiles.some(function(t){ return t.l >= 3; }); }, r:{stone:30}},
-  {t:"Reach day 10", ok:function(){ return s.day >= 10; }, r:{gold:40}},
-  {t:"Hold 200 wood at once", ok:function(){ return s.res.wood >= 200; }, r:{gold:50}},
-  {t:"Reach 25 villagers", ok:function(){ return s.pop >= 25; }, r:{gold:80}}
-];
-var TR = [
-  {l:"Sell 20 wood", give:{wood:20}, get:{gold:10}}, {l:"Sell 20 stone", give:{stone:20}, get:{gold:14}}, {l:"Sell 20 food", give:{food:20}, get:{gold:8}},
-  {l:"Buy 20 wood", give:{gold:14}, get:{wood:20}}, {l:"Buy 20 stone", give:{gold:22}, get:{stone:20}}, {l:"Buy 20 food", give:{gold:12}, get:{food:20}}
-];
+    <!-- Main App Card -->
+    <div class="app-card" id="main-app">
+        <!-- Headline -->
+        <div class="header-section">
+            <div class="badge-tag">FREE ACCESS</div>
+            <h1 class="main-headline">ANANDHU EARNING GROUP PORTAL</h1>
+        </div>
 
-/* ===== state ===== */
-function fresh(){
-  var R = rng(hstr("io-" + uid)), tiles = [];
-  for (var i=0;i<N;i++){ var r = R(); tiles.push({t: r < .2 ? "f" : r < .35 ? "r" : r < .55 ? "d" : "p", b:null, l:0}); }
-  return {res:{wood:40,stone:10,food:25,gold:0}, pop:2, day:1, tc:0, tiles:tiles, q:{}, log:[], last:Date.now(), adAt:0};
-}
-var s = fresh();
-try { var p = JSON.parse(localStorage.getItem(KEY) || "null"); if (p && p.tiles && p.tiles.length === N) s = Object.assign(fresh(), p); } catch(e){}
-function save(){ try { s.last = Date.now(); localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
-function cnt(b){ return s.tiles.filter(function(t){ return t.b === b; }).length; }
-function cap(){ return 4 + 4*s.tiles.filter(function(t){ return t.b === "house"; }).reduce(function(a,t){ return a + t.l; }, 0); }
-function prod(){
-  var o = {wood:0,stone:0,food:0,gold:0};
-  s.tiles.forEach(function(t){ if (!t.b) return; var d = B[t.b]; if (d.p) for (var k in d.p) o[k] += d.p[k] * t.l * (t.t === d.g ? 1.5 : 1); });
-  if (s.pop < 2) o.gold = 0; return o;
-}
-function can(c){ for (var k in c) if (s.res[k] < c[k]) return false; return true; }
-function pay(c){ for (var k in c) s.res[k] -= c[k]; }
-function gain(c){ for (var k in c) s.res[k] += c[k]; }
-function cs(c){ var a = []; for (var k in c) a.push(c[k] + " " + RN[k]); return a.join(", "); }
-function upCost(t){ var c = {}, b = B[t.b].c; for (var k in b) c[k] = Math.ceil(b[k] * t.l * 1.6); return c; }
-function addLog(m){ s.log.unshift("Day " + s.day + ": " + m); s.log = s.log.slice(0, 5); }
+        <!-- Left Image & Right Top Button Row -->
+        <div class="content-row">
+            <div class="image-wrapper">
+                <img src="https://i.ibb.co/LzVwQRyh/increase-money-grow-Money.jpg" alt="Thumbnail" class="main-image" id="mainImg">
+            </div>
 
-/* offline progress: half rate, up to 1 hour */
-(function(){
-  var ticks = Math.min(1800, Math.max(0, (Date.now() - s.last)/2000)) * .5;
-  if (ticks > 10) { var pr = prod(); for (var k in pr) s.res[k] += pr[k]*ticks; setTimeout(function(){ toast("Welcome back. Your settlement kept working while you were away."); }, 400); }
-})();
+            <div class="controls-wrapper">
+                <button class="btn-action" id="adBtn" onclick="handleAdClick()">
+                    <i class="fa-solid fa-play" id="btnIcon"></i>
+                    <span id="btnText">Watch Ads (0/5)</span>
+                </button>
 
-/* ===== simulation ===== */
-function tick(){
-  var pr = prod(); for (var k in pr) s.res[k] += pr[k];
-  s.res.food -= s.pop * .25;
-  var c = cap();
-  if (s.res.food <= 0) { s.res.food = 0; s.pop = Math.max(1, s.pop - .5); }
-  else if (s.pop < c && s.res.food > 5) s.pop = Math.min(c, s.pop + .34);
-  if (s.pop > c) s.pop = c;
-  s.tc++;
-  if (s.tc % 15 === 0) { s.day++; if (Math.random() < .4) addLog(EV[Math.floor(Math.random()*EV.length)]()); }
-  render();
-}
+                <div class="progress-dots">
+                    <div class="dot" id="dot-1"></div>
+                    <div class="dot" id="dot-2"></div>
+                    <div class="dot" id="dot-3"></div>
+                    <div class="dot" id="dot-4"></div>
+                    <div class="dot" id="dot-5"></div>
+                </div>
+            </div>
+        </div>
 
-/* ===== UI ===== */
-var sel = -1, tab = "island";
-function render(){
-  ["wood","stone","food","gold"].forEach(function(k){ $("r-" + k).textContent = Math.floor(s.res[k]); });
-  $("day").textContent = "Day " + s.day + " · Villagers " + Math.floor(s.pop) + "/" + cap();
-  var pr = prod(), fn = pr.food - s.pop*.25;
-  $("rates").textContent = "Every 2 s: wood +" + pr.wood.toFixed(1) + " · stone +" + pr.stone.toFixed(1) + " · food " + (fn >= 0 ? "+" : "") + fn.toFixed(1) + " · gold +" + pr.gold.toFixed(1);
-  $("log").innerHTML = s.log.map(function(l){ return "• " + l; }).join("<br>");
-  $("adDrop").disabled = Date.now() - s.adAt < AD_COOLDOWN_MS;
-  if (tab === "quests") renderQ();
-}
-function renderGrid(){
-  var h = "";
-  s.tiles.forEach(function(t, i){
-    h += '<button class="tile ' + t.t + (i === sel ? " sel" : "") + '" data-i="' + i + '" aria-label="' + TN[t.t][1] + (t.b ? ", " + B[t.b].n + " level " + t.l : ", empty") + '">' +
-         (t.b ? B[t.b].e + "<i>" + t.l + "</i>" : '<span class="g">' + TN[t.t][0] + "</span>") + "</button>";
-  });
-  $("grid").innerHTML = h; renderSheet();
-}
-function renderSheet(){
-  var el = $("sheet");
-  if (sel < 0) { el.innerHTML = "<h3>Tap a tile</h3><p>Match buildings to terrain for +50% output: farms on 🌻 fertile land, lumber camps in 🌲 forest, quarries on 🪨 rock. Houses raise your villager limit. Villagers eat food.</p>"; return; }
-  var t = s.tiles[sel], h;
-  if (!t.b) {
-    h = "<h3>" + TN[t.t][1] + " tile</h3>";
-    Object.keys(B).forEach(function(k){ var d = B[k]; h += '<div class="opt"><div class="t"><b>' + d.e + " " + d.n + (d.g === t.t ? " · terrain bonus" : "") + "</b><span>" + d.d + " Cost: " + cs(d.c) + '</span></div><button class="btn" data-build="' + k + '"' + (can(d.c) ? "" : " disabled") + ">Build</button></div>"; });
-  } else {
-    var d = B[t.b], uc = upCost(t);
-    h = "<h3>" + d.e + " " + d.n + " · level " + t.l + "</h3><p>" + d.d + "</p>" +
-        '<div class="opt"><div class="t"><b>Upgrade to level ' + (t.l + 1) + "</b><span>Cost: " + cs(uc) + '</span></div><button class="btn" data-up="1"' + (t.l >= 5 || !can(uc) ? " disabled" : "") + ">" + (t.l >= 5 ? "Max" : "Upgrade") + "</button></div>" +
-        '<div class="opt"><div class="t"><b>Demolish</b><span>Refund half of the build cost</span></div><button class="btn alt" data-dem="1">Demolish</button></div>';
-  }
-  el.innerHTML = h;
-}
-$("grid").addEventListener("click", function(e){ var b = e.target.closest("[data-i]"); if (!b) return; sel = +b.getAttribute("data-i"); haptic("light"); renderGrid(); });
-$("sheet").addEventListener("click", function(e){
-  if (sel < 0) return; var t = s.tiles[sel], b;
-  if ((b = e.target.closest("[data-build]"))) { var d = B[b.getAttribute("data-build")]; if (t.b || !can(d.c)) return; pay(d.c); t.b = b.getAttribute("data-build"); t.l = 1; haptic("medium"); }
-  else if (e.target.closest("[data-up]")) { var uc = upCost(t); if (t.l >= 5 || !can(uc)) return; pay(uc); t.l++; haptic("medium"); }
-  else if (e.target.closest("[data-dem]")) { var c = {}, bc = B[t.b].c; for (var k in bc) c[k] = Math.floor(bc[k]/2); gain(c); t.b = null; t.l = 0; }
-  else return;
-  save(); render(); renderGrid();
-});
+        <!-- Caption Below Image & Button -->
+        <div class="caption-card">
+            <p class="caption-text">
+                ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
+            </p>
+        </div>
+    </div>
 
-function renderQ(){
-  var h = "";
-  QS.forEach(function(q, i){
-    var done = s.q[i], ready = !done && q.ok();
-    h += '<div class="opt"><div class="t"><b>' + q.t + "</b><span>Reward: " + cs(q.r) + '</span></div>' + (done ? '<span class="done">Done</span>' : '<button class="btn" data-q="' + i + '"' + (ready ? "" : " disabled") + ">Claim</button>") + "</div>";
-  });
-  $("qlist").innerHTML = h;
-}
-$("qlist").addEventListener("click", function(e){
-  var b = e.target.closest("[data-q]"); if (!b) return; var i = +b.getAttribute("data-q"), q = QS[i];
-  if (s.q[i] || !q.ok()) return; s.q[i] = true; gain(q.r); toast("Goal complete: " + q.t); haptic("heavy"); save(); render(); renderQ();
-});
-function renderT(){
-  var h = ""; TR.forEach(function(r, i){ h += '<div class="opt"><div class="t"><b>' + r.l + "</b><span>" + cs(r.give) + " → " + cs(r.get) + '</span></div><button class="btn" data-tr="' + i + '"' + (can(r.give) ? "" : " disabled") + ">Trade</button></div>"; });
-  $("trades").innerHTML = h;
-}
-$("trades").addEventListener("click", function(e){
-  var b = e.target.closest("[data-tr]"); if (!b) return; var r = TR[+b.getAttribute("data-tr")];
-  if (!can(r.give)) return; pay(r.give); gain(r.get); haptic("light"); save(); render(); renderT();
-});
-document.querySelector("nav").addEventListener("click", function(e){
-  var b = e.target.closest("[data-t]"); if (!b) return; tab = b.getAttribute("data-t");
-  ["island","quests","market","about"].forEach(function(n){ $("t-" + n).hidden = n !== tab; });
-  document.querySelectorAll("nav button").forEach(function(x){ x.setAttribute("aria-selected", x === b ? "true" : "false"); });
-  if (tab === "quests") renderQ(); if (tab === "market") renderT();
-});
+    <script>
+        // Telegram WebApp Setup
+        const tg = window.Telegram.WebApp;
+        if (tg && tg.expand) {
+            tg.expand();
+        }
 
-/* ===== optional rewarded supply drop (AdsGram) ===== */
-var ad = null;
-try { if (window.Adsgram && ADSGRAM_BLOCK_ID.indexOf("YOUR_") !== 0) ad = window.Adsgram.init({ blockId: ADSGRAM_BLOCK_ID }); } catch(e){}
-$("adDrop").onclick = function(){
-  if (Date.now() - s.adAt < AD_COOLDOWN_MS) { toast("Please wait a moment before the next ad."); return; }
-  if (!ad) { toast("Ads are not available right now."); return; }
-  ad.show().then(function(r){
-    if (r && r.done) { s.adAt = Date.now(); gain({wood:30,stone:15,food:20}); toast("Supply drop received"); save(); render(); renderT(); }
-    else toast("Watch the full ad to receive the supplies.");
-  }).catch(function(){ toast("No ad available right now. Try again soon."); });
-};
+        // 5 Block IDs for 5 Ads
+        const blockIds = [
+            'int-58239', // Ad 1
+            '58240', // Ad 2
+            '58241', // Ad 3
+            '58166', // Ad 4
+            'int-58242'      // Ad 5
+        ];
 
-setInterval(tick, 2000); setInterval(save, 5000);
-document.addEventListener("visibilitychange", function(){ if (document.hidden) save(); });
-window.addEventListener("pagehide", save);
-render(); renderGrid();
-})();
-</script>
+        let watchedCount = 0;
+        const totalRequired = 5;
+        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // ഇവിടെ നിങ്ങളുടെ ഗ്രൂപ്പ് ലിങ്ക് നൽകുക
+
+        function updateUI() {
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+            const adBtn = document.getElementById('adBtn');
+
+            // Progress Dots Update
+            for (let i = 1; i <= totalRequired; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (i <= watchedCount) {
+                    dot.className = "dot completed";
+                } else if (i === watchedCount + 1) {
+                    dot.className = "dot active";
+                } else {
+                    dot.className = "dot";
+                }
+            }
+
+            // Button State Update
+            if (watchedCount < totalRequired) {
+                btnText.innerText = `Watch Ads (${watchedCount}/${totalRequired})`;
+                btnIcon.className = "fa-solid fa-play";
+            } else {
+                btnText.innerText = "Join Telegram Group";
+                btnIcon.className = "fa-brands fa-telegram";
+                adBtn.classList.add('unlocked');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        function handleAdClick() {
+            if (watchedCount >= totalRequired) {
+                // 5 ആഡും പൂർത്തിയാക്കിയ ശേഷം ലിങ്ക് ഓപ്പൺ ചെയ്യുന്നു
+                if (tg && tg.openTelegramLink) {
+                    tg.openTelegramLink(telegramGroupUrl);
+                } else {
+                    window.location.href = telegramGroupUrl;
+                }
+                return;
+            }
+
+            const currentBlockId = blockIds[watchedCount];
+            
+            // Adsgram script സന്നിഹിതമാണെങ്കിൽ മാത്രം Ad കാണിക്കും
+            if (window.Adsgram) {
+                const AdController = window.Adsgram.init({ blockId: currentBlockId });
+                
+                AdController.show().then((result) => {
+                    watchedCount++;
+                    updateUI();
+                    if (watchedCount === totalRequired) {
+                        showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
+                    }
+                }).catch((result) => {
+                    showToast("ആഡ് പൂർണ്ണമായി കണ്ടാൽ മാത്രമേ അടുത്തതിലേക്ക് പോകാൻ സാധിക്കൂ.");
+                });
+            } else {
+                // സാധാരണ വെബ്‌സൈറ്റ് ബ്രൗസറിൽ ചെക്ക് ചെയ്യുമ്പോൾ നേരിട്ട് 1 സബ്‌മിറ്റ് ആവും (Testing Fallback)
+                watchedCount++;
+                updateUI();
+                if (watchedCount === totalRequired) {
+                    showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
+                }
+            }
+        }
+
+        // Initialize UI
+        updateUI();
+    </script>
 </body>
 </html>
