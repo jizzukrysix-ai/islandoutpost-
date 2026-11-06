@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="ml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ANANDHU EARNING 2026 !</title>
+    <title>SQ Premium Unlocker</title>
     <!-- Telegram WebApp SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <!-- Adsgram Script -->
-    <script src="https://sad.adsgram.ai/js/sad-index.js"></script>
+    <!-- Adsgram Script (With Async & Defer for seamless loading) -->
+    <script src="https://sad.adsgram.ai/js/sad-index.js" async></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -259,17 +260,17 @@
     <div class="ambient-glow"></div>
     <div class="ambient-glow-bottom"></div>
 
-    <div id="toast" class="toast">Ad muzhuvanaayi kaanuka!</div>
+    <div id="toast" class="toast">പരസ്യം മുഴുവനായി കാണുക!</div>
 
     <div class="app-card" id="main-app">
         <div class="header-section">
-            <div class="badge-tag">FREE ACCESS</div>
-            <h1 class="main-headline">ANANDHU EARNING GROUP PORTAL </h1>
+            <div class="badge-tag">VIP ACCESS</div>
+            <h1 class="main-headline">SQ X SENSI PORTAL</h1>
         </div>
 
         <div class="content-row">
             <div class="image-wrapper">
-                <img src="https://i.ibb.co/LzVwQRyh/increase-money-grow-Money.jpg" alt="Thumbnail" class="main-image" id="mainImg">
+                <img src="https://via.placeholder.com/150/170a2c/9d4edd?text=SQ+SENSI" alt="Thumbnail" class="main-image" id="mainImg">
             </div>
 
             <div class="controls-wrapper">
@@ -290,28 +291,31 @@
 
         <div class="caption-card">
             <p class="caption-text">
-               ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
+                ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
             </p>
         </div>
     </div>
 
     <script>
-        const tg = window.Telegram ? window.Telegram.WebApp : null;
-        if (tg && tg.expand) {
+        // Initialize Telegram WebApp SDK safely
+        const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
+        if (tg) {
+            tg.ready();
             tg.expand();
         }
 
+        // 5 Adsgram Block IDs
         const blockIds = [
             'int-58239', // Ad 1
             '58240', // Ad 2
             '58241', // Ad 3
             '58166', // Ad 4
-            'int-58242'      // Ad 5
+            'int-58242'// Ad 5
         ];
 
         let watchedCount = 0;
         const totalRequired = 5;
-        const telegramGroupUrl = "https://t.me/+up_18EEy_0oyNjVl";
+        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // നിങ്ങളുടെ ടെലിഗ്രാം ഗ്രൂപ്പ് ലിങ്ക് നൽകുക
 
         function updateUI() {
             const btnText = document.getElementById('btnText');
@@ -362,34 +366,41 @@
 
             const currentBlockId = blockIds[watchedCount];
 
-            if (window.Adsgram) {
+            // Safely check if Adsgram controller is loaded
+            if (typeof window.Adsgram !== 'undefined') {
                 adBtn.disabled = true;
                 
                 try {
-                    const AdController = window.Adsgram.init({ blockId: currentBlockId });
+                    const AdController = window.Adsgram.init({ blockId: String(currentBlockId) });
                     
                     AdController.show().then((result) => {
                         adBtn.disabled = false;
-                        // Ad successfully completed
                         watchedCount++;
                         updateUI();
                         if (watchedCount === totalRequired) {
-                            showToast("Ellaa ad-um poorthiyaayi! Ini group-il join cheyyaam.");
+                            showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
                         }
                     }).catch((error) => {
                         adBtn.disabled = false;
-                        // User skipped or ad failed/no fill -> DO NOT INCREMENT WATCHEDCOUNT
-                        console.error("Adsgram Error or Skipped:", error);
-                        showToast("Ad muzhuvanaayi kaanuka / Ad load aayilla. Meendum try cheyyaam.");
+                        console.error("Adsgram Show Error:", error);
+                        showToast("ആഡ് മുഴുവനായി കാണുക അല്ലെങ്കിൽ ഒന്നുകൂടി ട്രൈ ചെയ്യുക.");
                     });
                 } catch(e) {
                     adBtn.disabled = false;
-                    console.error("Adsgram Init Error:", e);
-                    showToast("Ad controller error. Meendum try cheyyaam.");
+                    console.error("Adsgram Controller Init Failure:", e);
+                    showToast("ആഡ് സർവർ കണക്റ്റ് ചെയ്യുന്നതിൽ എറർ വന്നു. വീണ്ടും ശ്രമിക്കുക.");
                 }
             } else {
-                // If Adsgram SDK is missing in web browser
-                showToast("Adsgram SDK loading error. Telegram-il open cheyyaam.");
+                // If Adsgram script is still loading dynamically retry
+                showToast("ആഡ് ലോഡ് ആവുന്നു... വീണ്ടും ക്ലിക്ക് ചെയ്യുക.");
+                
+                // Fallback attempt to load dynamic Adsgram script if blocked
+                if (!document.getElementById('adsgram-dynamic-script')) {
+                    const script = document.createElement('script');
+                    script.id = 'adsgram-dynamic-script';
+                    script.src = 'https://sad.adsgram.ai/js/sad-index.js';
+                    document.head.appendChild(script);
+                }
             }
         }
 
