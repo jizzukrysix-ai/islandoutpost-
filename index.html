@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#0d0814">
-<title>ANANDHU EARNING 2027</title>
+<meta name="theme-color" content="#0a0002">
+<title>ANANDU EARNING HUB</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
 <style>
 :root {
-  --bg-color: #0b0711;
-  --card-bg: rgba(26, 17, 38, 0.85);
-  --border-color: rgba(168, 85, 247, 0.35);
-  --accent-purple: #9333ea;
-  --accent-glow: rgba(147, 51, 234, 0.6);
+  --bg-color: #070002;
+  --card-bg: rgba(25, 5, 8, 0.75);
+  --border-color: rgba(255, 75, 95, 0.2);
+  --accent-red: #ff2a4d;
+  --accent-glow: rgba(255, 42, 77, 0.5);
   --text-main: #ffffff;
-  --text-muted: #c0b6cf;
+  --text-muted: #b0a4a7;
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
@@ -30,272 +30,224 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #app {
   width: 100%;
   max-width: 420px;
-  padding: 16px;
+  min-height: 100vh;
+  padding: 20px 16px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1f030a 0%, #070002 70%);
 }
 
-.main-card {
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Top Welcome Badge */
+.welcome-badge {
+  background: rgba(255, 42, 77, 0.08);
+  border: 1px solid rgba(255, 42, 77, 0.3);
+  color: #ff99ab;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(255, 42, 77, 0.15);
+}
+
+/* Glowing Circle Image */
+.circle-img-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #ff2a4d, #700015);
+  box-shadow: 0 0 30px var(--accent-glow), inset 0 0 15px rgba(255, 42, 77, 0.5);
+  animation: pulseGlow 3s infinite alternate;
+  margin: 4px 0;
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #110003;
+}
+
+/* Title Header */
+.hub-title {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 30%, #ff99ab 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sub-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: -8px 0 4px 0;
+}
+
+/* Divider Line */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-red);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-red);
+  margin: 4px 0 12px 0;
+}
+
+/* Info Box matching screenshot */
+.info-card {
   width: 100%;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 26px;
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.main-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 60%);
-  pointer-events: none;
-  animation: rotateGlow 10s linear infinite;
-}
-
-.vip-badge {
-  background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(168, 85, 247, 0.4));
-  border: 1px solid rgba(168, 85, 247, 0.6);
-  color: #e9d5ff;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  padding: 6px 18px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
-  position: relative;
-  z-index: 1;
-}
-
-.sub-heading {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  margin: 0 0 24px 0;
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 18px;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #d8b4fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.content-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Left Square Box with Image */
-.left-image-box {
-  width: 100px;
-  height: 100px;
-  background: rgba(15, 10, 24, 0.9);
-  border: 1.5px solid rgba(168, 85, 247, 0.4);
-  border-radius: 18px;
+.info-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(0,0,0,0.6);
-  flex-shrink: 0;
-  position: relative;
-  transition: transform 0.3s ease;
+  gap: 6px;
 }
 
-.left-image-box:hover {
-  transform: scale(1.03);
+.info-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-.left-image-box img {
+/* Action Button (Watch Ads / Join Telegram) */
+.action-btn {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.right-action-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.watch-btn {
-  width: 100%;
-  background: linear-gradient(135deg, #9333ea, #6b21a8);
-  border: 1px solid rgba(216, 180, 254, 0.4);
+  background: linear-gradient(135deg, #ff2a4d, #b30024);
+  border: 1px solid rgba(255, 153, 171, 0.4);
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
-  padding: 14px 12px;
+  font-size: 15px;
+  padding: 16px 20px;
   border-radius: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  box-shadow: 0 6px 25px var(--accent-glow);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  gap: 10px;
+  box-shadow: 0 8px 25px var(--accent-glow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.watch-btn::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: 0.5s;
+.action-btn:active {
+  transform: scale(0.97);
 }
 
-.watch-btn:hover::after {
-  left: 100%;
+.action-btn.success {
+  background: linear-gradient(135deg, #059669, #10b981);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
-.watch-btn:active {
-  transform: scale(0.96);
-}
-
-.watch-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  filter: grayscale(0.5);
-  box-shadow: none;
-}
-
-.dots-container {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dot.active {
-  background: #c084fc;
-  width: 20px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #c084fc;
-}
-
-.caption-box {
-  width: 100%;
-  background: rgba(15, 10, 24, 0.7);
-  border: 1px solid rgba(168, 85, 247, 0.25);
-  border-radius: 16px;
-  padding: 14px 16px;
+.footer-note {
+  font-size: 11px;
+  color: #7a6d71;
   text-align: center;
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--text-muted);
-  position: relative;
-  z-index: 1;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+  margin-top: 4px;
 }
 
-.caption-box span {
-  color: #e9d5ff;
-  font-weight: 600;
-}
-
+/* Toast Notification */
 #toast {
   position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: rgba(24, 17, 36, 0.95);
-  border: 1px solid rgba(168, 85, 247, 0.6);
+  background: #140206;
+  border: 1px solid rgba(255, 42, 77, 0.5);
   color: #fff;
-  padding: 12px 22px;
-  border-radius: 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
   font-size: 13px;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   z-index: 99;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 #toast.on {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-@keyframes cardEntrance {
-  from { opacity: 0; transform: scale(0.92) translateY(15px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes rotateGlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px rgba(255, 42, 77, 0.4); }
+  100% { box-shadow: 0 0 35px rgba(255, 42, 77, 0.8); }
 }
 </style>
 </head>
 <body>
 
 <div id="app">
-  <div class="main-card">
-    <div class="vip-badge">FREE ACCESS</div>
-    <h1 class="sub-heading">ANANDHU EARNING GUIDE PORTAL</h1>
+  <div class="main-container">
+    <div class="welcome-badge">Welcome to our community</div>
 
-    <div class="content-row">
-      <!-- Left Square Box with Image -->
-      <div class="left-image-box">
-        <!-- നിങ്ങളുടെ ഇമേജ് ലിങ്ക് ഇവിടെ നൽകുക (Src മാറ്റാവുന്നതാണ്) -->
-        <img src="https://i.ibb.co/LzVwQRyh/increase-money-grow-Money.jpg" alt="Sensi Image">
-      </div>
-
-      <div class="right-action-area">
-        <button class="watch-btn" id="watchBtn" onclick="handleWatchAd()">
-          <span>▶</span> <span id="btnText">Watch Ads (0/5)</span>
-        </button>
-        
-        <div class="dots-container" id="dotsContainer">
-          <div class="dot" id="dot-1"></div>
-          <div class="dot" id="dot-2"></div>
-          <div class="dot" id="dot-3"></div>
-          <div class="dot" id="dot-4"></div>
-          <div class="dot" id="dot-5"></div>
-        </div>
-      </div>
+    <!-- Circle Image with Glowing Ring -->
+    <div class="circle-img-container">
+      <img src="https://i.ibb.co/LzVwQRyh/increase-money-grow-Money.jpg" alt="Vicky Hub" class="circle-img">
     </div>
 
-    <div class="caption-box">
-      ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്ട് ജോയിൻ ആകുന്നതാണ്.
+    <h1 class="hub-title">EARNING TUTORIAL HUB 📈</h1>
+    <div class="sub-text">Join our community for updates and insights.</div>
+    <div class="divider"></div>
+
+    <!-- Info Box -->
+    <div class="info-card">
+      <h4>ANANDHU EARNING 💸</h4>
+      <p>Join our Telegram community to stay connected and receive the latest updates.</p>
     </div>
+
+    <!-- Watch Ads / Join Button -->
+    <button class="action-btn" id="actionBtn" onclick="handleMainAction()">
+      <span>▶</span> <span id="btnText">Watch Ads (0/5)</span>
+    </button>
+
+    <div class="footer-note" id="footerNote">ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള ADS കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്ട് ജോയിൻ ആകുന്നതാണ്</div>
   </div>
 </div>
 
@@ -305,7 +257,7 @@ html, body {
 (function(){
   "use strict";
 
-  // 5 വ്യത്യസ്ത ആഡ് ബ്ലോക്ക് ഐഡികൾ (ഒരോ ആഡിനും ഓരോ ബ്ലോക്ക് വീതം)
+  // 5 വ്യത്യസ്ത ആഡ് ബ്ലോക്ക് ഐഡികൾ
   var ADSGRAM_BLOCK_IDS = [
     'int-58239', // Ad 1
     '58240',     // Ad 2
@@ -316,14 +268,15 @@ html, body {
 
   var currentAdCount = 0;
   var maxAds = 5;
+  var isUnlocked = false;
 
   var TG = window.Telegram && window.Telegram.WebApp;
   if (TG) {
     try {
       TG.ready();
       TG.expand();
-      TG.setHeaderColor && TG.setHeaderColor("#0b0711");
-      TG.setBackgroundColor && TG.setBackgroundColor("#0b0711");
+      TG.setHeaderColor && TG.setHeaderColor("#070002");
+      TG.setBackgroundColor && TG.setBackgroundColor("#070002");
     } catch(e){}
   }
 
@@ -335,42 +288,39 @@ html, body {
   }
 
   function updateUI() {
-    document.getElementById("btnText").textContent = "Watch Ads (" + currentAdCount + "/" + maxAds + ")";
-    
-    for (var i = 1; i <= maxAds; i++) {
-      var dot = document.getElementById("dot-" + i);
-      if (i <= currentAdCount) {
-        dot.classList.add("active");
-      } else {
-        dot.classList.remove("active");
-      }
-    }
+    var btnText = document.getElementById("btnText");
+    var actionBtn = document.getElementById("actionBtn");
+    var footerNote = document.getElementById("footerNote");
 
-    if (currentAdCount >= maxAds) {
-      var btn = document.getElementById("watchBtn");
-      btn.innerHTML = "<span>✓</span> <span>Verified! Joining Group...</span>";
-      btn.style.background = "linear-gradient(135deg, #059669, #10b981)";
-      
-      setTimeout(function() {
-        toast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ടെലഗ്രാം ഗ്രൂപ്പിലേക്ക് തിരിച്ചുവിടുന്നു...");
-        setTimeout(function(){
-          var groupLink = "https://t.me/+up_18EEy_0oyNjVl";
-          if (TG && TG.openTelegramLink) {
-            TG.openTelegramLink(groupLink);
-          } else {
-            window.open(groupLink, "_blank");
-          }
-        }, 1200);
-      }, 500);
+    if (currentAdCount < maxAds) {
+      btnText.textContent = "Watch Ads (" + currentAdCount + "/" + maxAds + ")";
+    } else {
+      isUnlocked = true;
+      actionBtn.innerHTML = "<span>✈️</span> <span>JOIN TELEGRAM COMMUNITY</span>";
+      actionBtn.classList.add("success");
+      footerNote.textContent = "Tap the button above to visit our Telegram community.";
     }
   }
 
-  window.handleWatchAd = function() {
-    if (currentAdCount >= maxAds) return;
+  window.handleMainAction = function() {
+    if (isUnlocked) {
+      // എല്ലാ ആഡ്സും കണ്ടുകഴിഞ്ഞാൽ ടെലഗ്രാം ലിങ്കിലേക്ക് പോകും
+      var groupLink = "https://t.me/+up_18EEy_0oyNjVl"; // നിങ്ങളുടെ ടെലിഗ്രാം ലിങ്ക് ഇവിടെ നൽകുക
+      toast("ടേലഗ്രാം ഗ്രൂപ്പിലേക്ക് സ്വാഗതം!");
+      setTimeout(function(){
+        if (TG && TG.openTelegramLink) {
+          TG.openTelegramLink(groupLink);
+        } else {
+          window.open(groupLink, "_blank");
+        }
+      }, 800);
+      return;
+    }
 
     var currentBlockId = ADSGRAM_BLOCK_IDS[currentAdCount];
 
     if (!window.Adsgram) {
+      // ടെസ്റ്റിംഗിനായി ആഡ്സ്ഗ്രാം SDK ഇല്ലാത്തപ്പോൾ ഓട്ടോമാറ്റിക് കൗണ്ട് കൂടാൻ
       currentAdCount++;
       updateUI();
       toast("Ad " + currentAdCount + " watched successfully!");
