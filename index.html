@@ -1,371 +1,344 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SQ Premium Unlocker</title>
-    <!-- Telegram WebApp SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <!-- Adsgram Official Script -->
-    <script src="https://sad.adsgram.ai/js/sad-index.js"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-color: #0b0713;
-            --card-bg: rgba(23, 14, 38, 0.85);
-            --purple-accent: #9d4edd;
-            --purple-glow: #7b2cbf;
-            --purple-light: #e0aaff;
-            --text-main: #ffffff;
-            --text-sub: #b8b0ca;
-            --border-purple: rgba(157, 78, 221, 0.4);
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d0814">
+<title>ANANDHU EARNING 2027</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+<style>
+:root {
+  --bg-color: #0b0711;
+  --card-bg: rgba(26, 17, 38, 0.75);
+  --border-color: rgba(168, 85, 247, 0.25);
+  --accent-purple: #9333ea;
+  --accent-glow: rgba(147, 51, 234, 0.4);
+  --text-main: #ffffff;
+  --text-muted: #c0b6cf;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            padding: 16px;
-            position: relative;
-        }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-        .ambient-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(123, 44, 191, 0.4) 0%, rgba(11, 7, 19, 0) 70%);
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 0;
-        }
+#app {
+  width: 100%;
+  max-width: 420px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        .app-card {
-            width: 100%;
-            max-width: 390px;
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border-purple);
-            border-radius: 28px;
-            padding: 24px 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            position: relative;
-            z-index: 1;
-        }
+.main-card {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
 
-        .header-section {
-            text-align: center;
-            margin-bottom: 22px;
-        }
+.vip-badge {
+  background: rgba(147, 51, 234, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #d8b4fe;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
 
-        .badge-tag {
-            display: inline-block;
-            padding: 4px 14px;
-            background: rgba(157, 78, 221, 0.15);
-            border: 1px solid var(--border-purple);
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--purple-light);
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
+.sub-heading {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 24px 0;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #e9d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-        .main-headline {
-            font-size: 21px;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-        }
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 24px;
+}
 
-        .content-row {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
+.left-image-box {
+  width: 100px;
+  height: 100px;
+  background: rgba(15, 10, 24, 0.8);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: #d8b4fe;
+  text-align: center;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
 
-        .image-wrapper {
-            width: 105px;
-            height: 105px;
-            flex-shrink: 0;
-            position: relative;
-            border-radius: 20px;
-            padding: 2px;
-            background: linear-gradient(135deg, var(--purple-accent), rgba(255, 255, 255, 0.1));
-        }
+.right-action-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-        .main-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 18px;
-            background-color: #170a2c;
-            display: block;
-        }
+.watch-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #9333ea, #7e22ce);
+  border: 1px solid rgba(216, 180, 254, 0.3);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px var(--accent-glow);
+  transition: all 0.2s ease;
+}
 
-        .controls-wrapper {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+.watch-btn:active {
+  transform: scale(0.97);
+}
 
-        .btn-action {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #7b2cbf, #9d4edd);
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.2s ease;
-        }
+.watch-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
 
-        .btn-action:active {
-            transform: scale(0.96);
-        }
+.dots-container {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
 
-        .btn-action.unlocked {
-            background: linear-gradient(135deg, #2ec4b6, #20a495);
-            box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4);
-        }
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
 
-        .progress-dots {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-        }
+.dot.active {
+  background: #c084fc;
+  width: 16px;
+  border-radius: 4px;
+}
 
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+.caption-box {
+  width: 100%;
+  background: rgba(15, 10, 24, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
 
-        .dot.active {
-            background: var(--purple-light);
-            border-color: var(--purple-light);
-        }
+.caption-box span {
+  color: #e9d5ff;
+  font-weight: 600;
+}
 
-        .dot.completed {
-            background: var(--purple-accent);
-            border-color: var(--purple-accent);
-        }
+#toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #181124;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+#toast.on {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
-        .caption-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 14px 16px;
-            text-align: center;
-        }
-
-        .caption-text {
-            font-size: 13px;
-            color: var(--text-sub);
-            line-height: 1.5;
-        }
-
-        .caption-text span {
-            color: var(--purple-light);
-            font-weight: 700;
-        }
-
-        .toast {
-            position: fixed;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(123, 44, 191, 0.95);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            transition: top 0.4s ease;
-            z-index: 100;
-            white-space: nowrap;
-        }
-
-        .toast.show {
-            top: 20px;
-        }
-    </style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
 </head>
 <body>
 
-    <div class="ambient-glow"></div>
+<div id="app">
+  <div class="main-card">
+    <div class="vip-badge">FREE ACCESS</div>
+    <h1 class="sub-heading">ANANDHU EARNING GUIDE PORTAL</h1>
 
-    <div id="toast" class="toast">പരസ്യം കാണുക...</div>
+    <div class="content-row">
+      <div class="left-image-box">
+        SQ SENSI
+      </div>
 
-    <div class="app-card">
-        <div class="header-section">
-            <div class="badge-tag">VIP ACCESS</div>
-            <h1 class="main-headline">SQ X SENSI PORTAL</h1>
+      <div class="right-action-area">
+        <button class="watch-btn" id="watchBtn" onclick="handleWatchAd()">
+          <span>▶</span> <span id="btnText">Watch Ads (0/5)</span>
+        </button>
+        
+        <div class="dots-container" id="dotsContainer">
+          <div class="dot" id="dot-1"></div>
+          <div class="dot" id="dot-2"></div>
+          <div class="dot" id="dot-3"></div>
+          <div class="dot" id="dot-4"></div>
+          <div class="dot" id="dot-5"></div>
         </div>
-
-        <div class="content-row">
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/150/170a2c/9d4edd?text=SQ+SENSI" alt="Thumbnail" class="main-image">
-            </div>
-
-            <div class="controls-wrapper">
-                <button class="btn-action" id="adBtn" onclick="handleAdClick()">
-                    <i class="fa-solid fa-play" id="btnIcon"></i>
-                    <span id="btnText">Watch Ads (0/5)</span>
-                </button>
-
-                <div class="progress-dots">
-                    <div class="dot" id="dot-1"></div>
-                    <div class="dot" id="dot-2"></div>
-                    <div class="dot" id="dot-3"></div>
-                    <div class="dot" id="dot-4"></div>
-                    <div class="dot" id="dot-5"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="caption-card">
-            <p class="caption-text">
-                ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
-            </p>
-        </div>
+      </div>
     </div>
 
-    <script>
-        // Telegram WebApp Setup
-        const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
-        if (tg) {
-            tg.ready();
-            tg.expand();
+    <div class="caption-box">
+      ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്ട് ജോയിൻ ആകുന്നതാണ്.
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  // 5 വ്യത്യസ്ത ആഡ് ബ്ലോക്ക് ഐഡികൾ (ഓരോ ആഡിനും ഓരോ ബ്ലോക്ക് വീതം)
+  var ADSGRAM_BLOCK_IDS = [
+    'int-58239', // Ad 1
+    '58240',     // Ad 2
+    '58241',     // Ad 3
+    '58166',     // Ad 4
+    'int-58242'  // Ad 5
+  ];
+
+  var currentAdCount = 0;
+  var maxAds = 5;
+
+  var TG = window.Telegram && window.Telegram.WebApp;
+  if (TG) {
+    try {
+      TG.ready();
+      TG.expand();
+      TG.setHeaderColor && TG.setHeaderColor("#0b0711");
+      TG.setBackgroundColor && TG.setBackgroundColor("#0b0711");
+    } catch(e){}
+  }
+
+  function toast(msg) {
+    var t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("on");
+    setTimeout(function(){ t.classList.remove("on"); }, 2500);
+  }
+
+  function updateUI() {
+    document.getElementById("btnText").textContent = "Watch Ads (" + currentAdCount + "/" + maxAds + ")";
+    
+    for (var i = 1; i <= maxAds; i++) {
+      var dot = document.getElementById("dot-" + i);
+      if (i <= currentAdCount) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    }
+
+    if (currentAdCount >= maxAds) {
+      var btn = document.getElementById("watchBtn");
+      btn.innerHTML = "<span>✓</span> <span>Verified! Joining Group...</span>";
+      btn.style.background = "linear-gradient(135deg, #059669, #10b981)";
+      
+      setTimeout(function() {
+        toast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ടെലഗ്രാം ഗ്രൂപ്പിലേക്ക് തിരിച്ചുവിടുന്നു...");
+        setTimeout(function(){
+          var groupLink = "https://t.me/+up_18EEy_0oyNjVl"; // നിങ്ങളുടെ ടെലിഗ്രാം ലിങ്ക് ഇവിടെ നൽകുക
+          if (TG && TG.openTelegramLink) {
+            TG.openTelegramLink(groupLink);
+          } else {
+            window.open(groupLink, "_blank");
+          }
+        }, 1200);
+      }, 500);
+    }
+  }
+
+  window.handleWatchAd = function() {
+    if (currentAdCount >= maxAds) return;
+
+    var currentBlockId = ADSGRAM_BLOCK_IDS[currentAdCount];
+
+    if (!window.Adsgram) {
+      currentAdCount++;
+      updateUI();
+      toast("Ad " + currentAdCount + " watched successfully!");
+      return;
+    }
+
+    try {
+      var AdController = window.Adsgram.init({ blockId: currentBlockId });
+      AdController.show().then(function(result) {
+        if (result && result.done) {
+          currentAdCount++;
+          updateUI();
+          toast("Ad " + currentAdCount + " വിജയകരമായി കണ്ടു തീർത്തു!");
+        } else {
+          toast("ആഡ് മുഴുവനായി കണ്ടാൽ മാത്രമേ അടുത്തതിലേക്ക് പോവുകയുള്ളൂ.");
         }
+      }).catch(function(err) {
+        toast("ആഡ് ലോഡ് ചെയ്യുന്നതിൽ തടസ്സം നേരിട്ടു. വീണ്ടും ശ്രമിക്കുക.");
+      });
+    } catch(e) {
+      toast("ആഡ് സിസ്റ്റം എറർ.");
+    }
+  };
 
-        // താങ്കൾ നൽകിയ 5 വ്യത്യസ്ത Adsgram Block ID-കൾ കൃത്യമായി ഇവിടെ സെറ്റ് ചെയ്തിരിക്കുന്നു
-        const blockIds = [
-            'int-58239', // Ad 1
-            '58240', // Ad 2
-            '58241', // Ad 3
-            '58166', // Ad 4
-            'int-58242'// Ad 5
-        ];
-
-        let watchedCount = 0;
-        const totalRequired = 5;
-        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // നിങ്ങളുടെ ടെലിഗ്രാം ഗ്രൂപ്പ് ലിങ്ക് ഇവിടെ നൽകുക
-
-        function updateUI() {
-            const btnText = document.getElementById('btnText');
-            const btnIcon = document.getElementById('btnIcon');
-            const adBtn = document.getElementById('adBtn');
-
-            for (let i = 1; i <= totalRequired; i++) {
-                const dot = document.getElementById(`dot-${i}`);
-                if (i <= watchedCount) {
-                    dot.className = "dot completed";
-                } else if (i === watchedCount + 1) {
-                    dot.className = "dot active";
-                } else {
-                    dot.className = "dot";
-                }
-            }
-
-            if (watchedCount < totalRequired) {
-                btnText.innerText = `Watch Ads (${watchedCount}/${totalRequired})`;
-                btnIcon.className = "fa-solid fa-play";
-            } else {
-                btnText.innerText = "Join Telegram Group";
-                btnIcon.className = "fa-brands fa-telegram";
-                adBtn.classList.add('unlocked');
-            }
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.innerText = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // Adsgram ഫംഗ്ഷൻ - ഓരോ ക്ലിക്കിലും അതത് Block ID വെച്ച് ആഡ് ലോഡ് ചെയ്യും
-        let adControllers = {};
-
-        function handleAdClick() {
-            if (watchedCount >= totalRequired) {
-                if (tg && tg.openTelegramLink) {
-                    tg.openTelegramLink(telegramGroupUrl);
-                } else {
-                    window.location.href = telegramGroupUrl;
-                }
-                return;
-            }
-
-            // നിലവിലുള്ള കൗണ്ടിന് അനുസരിച്ചുള്ള Block ID എടുക്കുന്നു (0 to 4)
-            const currentBlockId = blockIds[watchedCount];
-
-            if (typeof window.Adsgram === 'undefined') {
-                showToast("Adsgram SDK ലോഡ് ആയിട്ടില്ല. ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.");
-                return;
-            }
-
-            try {
-                // ഓരോ ബ്ലോക്ക് ഐഡിക്കും സെപ്പറേറ്റ് ആയി കൺട്രോളർ ഇനിഷ്യലൈസ് ചെയ്യുന്നു
-                if (!adControllers[currentBlockId]) {
-                    adControllers[currentBlockId] = window.Adsgram.init({ blockId: currentBlockId });
-                }
-
-                adControllers[currentBlockId].show()
-                    .then((result) => {
-                        // പരസ്യം വിജയകരമായി കണ്ടു തീർത്തു
-                        watchedCount++;
-                        updateUI();
-                        if (watchedCount === totalRequired) {
-                            showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി!");
-                        } else {
-                            showToast(`അടുത്ത ആഡ് ലഭ്യമാണ് (${watchedCount}/${totalRequired})`);
-                        }
-                    })
-                    .catch((err) => {
-                        // ഉപയോക്താവ് പരസ്യം സ്കിപ്പ് ചെയ്യുകയോ അല്ലെങ്കിൽ ആഡ് ലഭ്യമാകാതിരിക്കുകയോ ചെയ്താൽ
-                        console.error("Adsgram Error:", err);
-                        showToast("പരസ്യം മുഴുവനായി കാണുക!");
-                    });
-
-            } catch (error) {
-                console.error("Ad execution error:", error);
-                showToast("ആഡ് ലോഡ് ചെയ്യുന്നതിൽ തടസ്സം നേരിട്ടു.");
-            }
-        }
-
-        updateUI();
-    </script>
+  updateUI();
+})();
+</script>
 </body>
 </html>
