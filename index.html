@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ml">
 <head>
@@ -7,21 +6,21 @@
     <title>SQ Premium Unlocker</title>
     <!-- Telegram WebApp SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <!-- Adsgram Script (With Async & Defer for seamless loading) -->
-    <script src="https://sad.adsgram.ai/js/sad-index.js" async></script>
+    <!-- Adsgram Official Script -->
+    <script src="https://sad.adsgram.ai/js/sad-index.js"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
             --bg-color: #0b0713;
-            --card-bg: rgba(23, 14, 38, 0.75);
+            --card-bg: rgba(23, 14, 38, 0.85);
             --purple-accent: #9d4edd;
             --purple-glow: #7b2cbf;
             --purple-light: #e0aaff;
             --text-main: #ffffff;
             --text-sub: #b8b0ca;
-            --border-purple: rgba(157, 78, 221, 0.3);
+            --border-purple: rgba(157, 78, 221, 0.4);
         }
 
         * {
@@ -48,48 +47,25 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(123, 44, 191, 0.35) 0%, rgba(11, 7, 19, 0) 70%);
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.4) 0%, rgba(11, 7, 19, 0) 70%);
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 0;
-            animation: pulse 6s infinite alternate ease-in-out;
-        }
-
-        .ambient-glow-bottom {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(157, 78, 221, 0.2) 0%, rgba(11, 7, 19, 0) 70%);
-            bottom: 5%;
-            right: -10%;
-            z-index: 0;
-        }
-
-        @keyframes pulse {
-            0% { transform: translateX(-50%) scale(0.9); opacity: 0.5; }
-            100% { transform: translateX(-50%) scale(1.15); opacity: 0.9; }
         }
 
         .app-card {
             width: 100%;
             max-width: 390px;
             background: var(--card-bg);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-purple);
             border-radius: 28px;
             padding: 24px 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
-                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
             position: relative;
             z-index: 1;
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .header-section {
@@ -116,7 +92,6 @@
             font-weight: 800;
             color: #ffffff;
             letter-spacing: 0.5px;
-            text-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
         }
 
         .content-row {
@@ -134,7 +109,6 @@
             border-radius: 20px;
             padding: 2px;
             background: linear-gradient(135deg, var(--purple-accent), rgba(255, 255, 255, 0.1));
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .main-image {
@@ -168,15 +142,10 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.2s ease;
         }
 
-        .btn-action:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .btn-action:active:not(:disabled) {
+        .btn-action:active {
             transform: scale(0.96);
         }
 
@@ -197,19 +166,16 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
         }
 
         .dot.active {
             background: var(--purple-light);
-            box-shadow: 0 0 10px var(--purple-light);
             border-color: var(--purple-light);
         }
 
         .dot.completed {
             background: var(--purple-accent);
             border-color: var(--purple-accent);
-            box-shadow: 0 0 6px var(--purple-accent);
         }
 
         .caption-card {
@@ -224,7 +190,6 @@
             font-size: 13px;
             color: var(--text-sub);
             line-height: 1.5;
-            font-weight: 400;
         }
 
         .caption-text span {
@@ -244,8 +209,7 @@
             font-size: 12px;
             font-weight: 600;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            backdrop-filter: blur(8px);
-            transition: top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: top 0.4s ease;
             z-index: 100;
             white-space: nowrap;
         }
@@ -258,11 +222,10 @@
 <body>
 
     <div class="ambient-glow"></div>
-    <div class="ambient-glow-bottom"></div>
 
-    <div id="toast" class="toast">പരസ്യം മുഴുവനായി കാണുക!</div>
+    <div id="toast" class="toast">പരസ്യം കാണുക...</div>
 
-    <div class="app-card" id="main-app">
+    <div class="app-card">
         <div class="header-section">
             <div class="badge-tag">VIP ACCESS</div>
             <h1 class="main-headline">SQ X SENSI PORTAL</h1>
@@ -270,7 +233,7 @@
 
         <div class="content-row">
             <div class="image-wrapper">
-                <img src="https://via.placeholder.com/150/170a2c/9d4edd?text=SQ+SENSI" alt="Thumbnail" class="main-image" id="mainImg">
+                <img src="https://via.placeholder.com/150/170a2c/9d4edd?text=SQ+SENSI" alt="Thumbnail" class="main-image">
             </div>
 
             <div class="controls-wrapper">
@@ -297,14 +260,14 @@
     </div>
 
     <script>
-        // Initialize Telegram WebApp SDK safely
+        // Telegram WebApp Setup
         const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
         if (tg) {
             tg.ready();
             tg.expand();
         }
 
-        // 5 Adsgram Block IDs
+        // താങ്കൾ നൽകിയ 5 വ്യത്യസ്ത Adsgram Block ID-കൾ കൃത്യമായി ഇവിടെ സെറ്റ് ചെയ്തിരിക്കുന്നു
         const blockIds = [
             'int-58239', // Ad 1
             '58240', // Ad 2
@@ -315,7 +278,7 @@
 
         let watchedCount = 0;
         const totalRequired = 5;
-        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // നിങ്ങളുടെ ടെലിഗ്രാം ഗ്രൂപ്പ് ലിങ്ക് നൽകുക
+        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // നിങ്ങളുടെ ടെലിഗ്രാം ഗ്രൂപ്പ് ലിങ്ക് ഇവിടെ നൽകുക
 
         function updateUI() {
             const btnText = document.getElementById('btnText');
@@ -352,9 +315,10 @@
             }, 3000);
         }
 
+        // Adsgram ഫംഗ്ഷൻ - ഓരോ ക്ലിക്കിലും അതത് Block ID വെച്ച് ആഡ് ലോഡ് ചെയ്യും
+        let adControllers = {};
+
         function handleAdClick() {
-            const adBtn = document.getElementById('adBtn');
-            
             if (watchedCount >= totalRequired) {
                 if (tg && tg.openTelegramLink) {
                     tg.openTelegramLink(telegramGroupUrl);
@@ -364,43 +328,40 @@
                 return;
             }
 
+            // നിലവിലുള്ള കൗണ്ടിന് അനുസരിച്ചുള്ള Block ID എടുക്കുന്നു (0 to 4)
             const currentBlockId = blockIds[watchedCount];
 
-            // Safely check if Adsgram controller is loaded
-            if (typeof window.Adsgram !== 'undefined') {
-                adBtn.disabled = true;
-                
-                try {
-                    const AdController = window.Adsgram.init({ blockId: String(currentBlockId) });
-                    
-                    AdController.show().then((result) => {
-                        adBtn.disabled = false;
+            if (typeof window.Adsgram === 'undefined') {
+                showToast("Adsgram SDK ലോഡ് ആയിട്ടില്ല. ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.");
+                return;
+            }
+
+            try {
+                // ഓരോ ബ്ലോക്ക് ഐഡിക്കും സെപ്പറേറ്റ് ആയി കൺട്രോളർ ഇനിഷ്യലൈസ് ചെയ്യുന്നു
+                if (!adControllers[currentBlockId]) {
+                    adControllers[currentBlockId] = window.Adsgram.init({ blockId: currentBlockId });
+                }
+
+                adControllers[currentBlockId].show()
+                    .then((result) => {
+                        // പരസ്യം വിജയകരമായി കണ്ടു തീർത്തു
                         watchedCount++;
                         updateUI();
                         if (watchedCount === totalRequired) {
-                            showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
+                            showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി!");
+                        } else {
+                            showToast(`അടുത്ത ആഡ് ലഭ്യമാണ് (${watchedCount}/${totalRequired})`);
                         }
-                    }).catch((error) => {
-                        adBtn.disabled = false;
-                        console.error("Adsgram Show Error:", error);
-                        showToast("ആഡ് മുഴുവനായി കാണുക അല്ലെങ്കിൽ ഒന്നുകൂടി ട്രൈ ചെയ്യുക.");
+                    })
+                    .catch((err) => {
+                        // ഉപയോക്താവ് പരസ്യം സ്കിപ്പ് ചെയ്യുകയോ അല്ലെങ്കിൽ ആഡ് ലഭ്യമാകാതിരിക്കുകയോ ചെയ്താൽ
+                        console.error("Adsgram Error:", err);
+                        showToast("പരസ്യം മുഴുവനായി കാണുക!");
                     });
-                } catch(e) {
-                    adBtn.disabled = false;
-                    console.error("Adsgram Controller Init Failure:", e);
-                    showToast("ആഡ് സർവർ കണക്റ്റ് ചെയ്യുന്നതിൽ എറർ വന്നു. വീണ്ടും ശ്രമിക്കുക.");
-                }
-            } else {
-                // If Adsgram script is still loading dynamically retry
-                showToast("ആഡ് ലോഡ് ആവുന്നു... വീണ്ടും ക്ലിക്ക് ചെയ്യുക.");
-                
-                // Fallback attempt to load dynamic Adsgram script if blocked
-                if (!document.getElementById('adsgram-dynamic-script')) {
-                    const script = document.createElement('script');
-                    script.id = 'adsgram-dynamic-script';
-                    script.src = 'https://sad.adsgram.ai/js/sad-index.js';
-                    document.head.appendChild(script);
-                }
+
+            } catch (error) {
+                console.error("Ad execution error:", error);
+                showToast("ആഡ് ലോഡ് ചെയ്യുന്നതിൽ തടസ്സം നേരിട്ടു.");
             }
         }
 
