@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>ANANDHU EARNING 2026 !</title>
+    <title>ANANDHU EARNING 2026 !</title>
     <!-- Telegram WebApp SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <!-- Adsgram Script -->
@@ -43,7 +43,6 @@
             position: relative;
         }
 
-        /* Ambient Background Glows */
         .ambient-glow {
             position: absolute;
             width: 300px;
@@ -71,7 +70,6 @@
             100% { transform: translateX(-50%) scale(1.15); opacity: 0.9; }
         }
 
-        /* Card Container */
         .app-card {
             width: 100%;
             max-width: 390px;
@@ -93,7 +91,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Header Section */
         .header-section {
             text-align: center;
             margin-bottom: 22px;
@@ -121,7 +118,6 @@
             text-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
         }
 
-        /* Content Row: Left Image & Right Button */
         .content-row {
             display: flex;
             align-items: center;
@@ -129,7 +125,6 @@
             margin-bottom: 20px;
         }
 
-        /* Left Side Square Image */
         .image-wrapper {
             width: 105px;
             height: 105px;
@@ -150,7 +145,6 @@
             display: block;
         }
 
-        /* Right Side Controls */
         .controls-wrapper {
             flex-grow: 1;
             display: flex;
@@ -158,7 +152,6 @@
             gap: 12px;
         }
 
-        /* Action Button */
         .btn-action {
             width: 100%;
             padding: 14px;
@@ -177,7 +170,12 @@
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        .btn-action:active {
+        .btn-action:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-action:active:not(:disabled) {
             transform: scale(0.96);
         }
 
@@ -186,7 +184,6 @@
             box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4);
         }
 
-        /* Progress Dots */
         .progress-dots {
             display: flex;
             justify-content: center;
@@ -214,7 +211,6 @@
             box-shadow: 0 0 6px var(--purple-accent);
         }
 
-        /* Caption Container */
         .caption-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -235,7 +231,6 @@
             font-weight: 700;
         }
 
-        /* Custom Toast Notification */
         .toast {
             position: fixed;
             top: -60px;
@@ -264,18 +259,14 @@
     <div class="ambient-glow"></div>
     <div class="ambient-glow-bottom"></div>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="toast">ദയവായി പരസ്യം മുഴുവനായി കാണുക!</div>
+    <div id="toast" class="toast">Ad muzhuvanaayi kaanuka!</div>
 
-    <!-- Main App Card -->
     <div class="app-card" id="main-app">
-        <!-- Headline -->
         <div class="header-section">
             <div class="badge-tag">FREE ACCESS</div>
-            <h1 class="main-headline">ANANDHU EARNING GROUP PORTAL</h1>
+            <h1 class="main-headline">ANANDHU EARNING GROUP PORTAL </h1>
         </div>
 
-        <!-- Left Image & Right Top Button Row -->
         <div class="content-row">
             <div class="image-wrapper">
                 <img src="https://i.ibb.co/LzVwQRyh/increase-money-grow-Money.jpg" alt="Thumbnail" class="main-image" id="mainImg">
@@ -297,22 +288,19 @@
             </div>
         </div>
 
-        <!-- Caption Below Image & Button -->
         <div class="caption-card">
             <p class="caption-text">
-                ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
+               ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാൻ മുകളിലുള്ള <span>5 ആഡ്സ്</span> കാണുക. അതിനുശേഷം ഗ്രൂപ്പിൽ ഡയറക്റ്റ് ജോയിൻ ആകുന്നതാണ്.
             </p>
         </div>
     </div>
 
     <script>
-        // Telegram WebApp Setup
-        const tg = window.Telegram.WebApp;
+        const tg = window.Telegram ? window.Telegram.WebApp : null;
         if (tg && tg.expand) {
             tg.expand();
         }
 
-        // 5 Block IDs for 5 Ads
         const blockIds = [
             'int-58239', // Ad 1
             '58240', // Ad 2
@@ -323,14 +311,13 @@
 
         let watchedCount = 0;
         const totalRequired = 5;
-        const telegramGroupUrl = "https://t.me/your_telegram_group_link"; // ഇവിടെ നിങ്ങളുടെ ഗ്രൂപ്പ് ലിങ്ക് നൽകുക
+        const telegramGroupUrl = "https://t.me/+up_18EEy_0oyNjVl";
 
         function updateUI() {
             const btnText = document.getElementById('btnText');
             const btnIcon = document.getElementById('btnIcon');
             const adBtn = document.getElementById('adBtn');
 
-            // Progress Dots Update
             for (let i = 1; i <= totalRequired; i++) {
                 const dot = document.getElementById(`dot-${i}`);
                 if (i <= watchedCount) {
@@ -342,7 +329,6 @@
                 }
             }
 
-            // Button State Update
             if (watchedCount < totalRequired) {
                 btnText.innerText = `Watch Ads (${watchedCount}/${totalRequired})`;
                 btnIcon.className = "fa-solid fa-play";
@@ -363,8 +349,9 @@
         }
 
         function handleAdClick() {
+            const adBtn = document.getElementById('adBtn');
+            
             if (watchedCount >= totalRequired) {
-                // 5 ആഡും പൂർത്തിയാക്കിയ ശേഷം ലിങ്ക് ഓപ്പൺ ചെയ്യുന്നു
                 if (tg && tg.openTelegramLink) {
                     tg.openTelegramLink(telegramGroupUrl);
                 } else {
@@ -374,31 +361,38 @@
             }
 
             const currentBlockId = blockIds[watchedCount];
-            
-            // Adsgram script സന്നിഹിതമാണെങ്കിൽ മാത്രം Ad കാണിക്കും
+
             if (window.Adsgram) {
-                const AdController = window.Adsgram.init({ blockId: currentBlockId });
+                adBtn.disabled = true;
                 
-                AdController.show().then((result) => {
-                    watchedCount++;
-                    updateUI();
-                    if (watchedCount === totalRequired) {
-                        showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
-                    }
-                }).catch((result) => {
-                    showToast("ആഡ് പൂർണ്ണമായി കണ്ടാൽ മാത്രമേ അടുത്തതിലേക്ക് പോകാൻ സാധിക്കൂ.");
-                });
-            } else {
-                // സാധാരണ വെബ്‌സൈറ്റ് ബ്രൗസറിൽ ചെക്ക് ചെയ്യുമ്പോൾ നേരിട്ട് 1 സബ്‌മിറ്റ് ആവും (Testing Fallback)
-                watchedCount++;
-                updateUI();
-                if (watchedCount === totalRequired) {
-                    showToast("എല്ലാ ആഡ്സും പൂർത്തിയായി! ഇനി ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യാം.");
+                try {
+                    const AdController = window.Adsgram.init({ blockId: currentBlockId });
+                    
+                    AdController.show().then((result) => {
+                        adBtn.disabled = false;
+                        // Ad successfully completed
+                        watchedCount++;
+                        updateUI();
+                        if (watchedCount === totalRequired) {
+                            showToast("Ellaa ad-um poorthiyaayi! Ini group-il join cheyyaam.");
+                        }
+                    }).catch((error) => {
+                        adBtn.disabled = false;
+                        // User skipped or ad failed/no fill -> DO NOT INCREMENT WATCHEDCOUNT
+                        console.error("Adsgram Error or Skipped:", error);
+                        showToast("Ad muzhuvanaayi kaanuka / Ad load aayilla. Meendum try cheyyaam.");
+                    });
+                } catch(e) {
+                    adBtn.disabled = false;
+                    console.error("Adsgram Init Error:", e);
+                    showToast("Ad controller error. Meendum try cheyyaam.");
                 }
+            } else {
+                // If Adsgram SDK is missing in web browser
+                showToast("Adsgram SDK loading error. Telegram-il open cheyyaam.");
             }
         }
 
-        // Initialize UI
         updateUI();
     </script>
 </body>
